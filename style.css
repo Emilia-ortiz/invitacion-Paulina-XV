@@ -1,10 +1,8 @@
-/* VARIABLES GLOBALES */
 :root {
-    --color-principal: #9A7B76; /* Rosa viejo de la imagen */
+    --color-principal: #9A7B76;
     --color-texto: #ffffff;
 }
 
-/* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -14,48 +12,45 @@ body {
     justify-content: center;
 }
 
-/* CONTENEDOR MÓVIL (Viewport vertical) */
 .container {
     width: 100%;
     max-width: 420px;
     background-color: var(--color-principal);
     color: var(--color-texto);
     text-align: center;
-    overflow-x: hidden;
 }
 
 section { padding: 45px 25px; }
 
-/* CONTROL DE IMÁGENES (Para que no salgan gigantes) */
+/* Fotos */
 .photo-main { padding: 0; height: 500px; max-height: 80vh; overflow: hidden; }
-.img-v { width: 100%; height: 100%; object-fit: cover; } /* Ajusta la imagen al marco */
-
+.img-v { width: 100%; height: 100%; object-fit: cover; }
 .photo-footer { padding: 0; }
 .img-h { width: 100%; height: 220px; object-fit: cover; display: block; }
 
-/* TIPOGRAFÍA Y DIVISORES */
+/* Textos */
 h3 { font-weight: 200; letter-spacing: 6px; font-size: 1.4rem; }
 h3 span { font-weight: 600; }
 .divider { width: 60%; height: 1px; background-color: rgba(255,255,255,0.3); margin: 25px auto; }
 .quote { font-family: 'Playfair Display', serif; font-style: italic; line-height: 1.6; font-size: 0.95rem; }
 
-/* CUENTA REGRESIVA */
+/* Reloj */
 #countdown { display: flex; justify-content: space-around; margin: 10px 0; }
 .time-box span { font-size: 1.8rem; font-weight: 200; display: block; }
 .time-box p { font-size: 0.6rem; letter-spacing: 2px; opacity: 0.8; }
 
-/* UBICACIÓN */
+/* Ubicación */
 .location-block { background-color: rgba(0,0,0,0.05); }
 .map-button { 
     display: inline-block; padding: 12px 25px; border: 1px solid white; 
     color: white; text-decoration: none; font-size: 0.7rem; margin-top: 15px; 
 }
 
-/* DIAMANTE ANIMADO (Floating effect) */
+/* Diamante */
 .diamond-icon { width: 40px; height: 40px; animation: floating 3s infinite ease-in-out; margin-bottom: 10px; }
 @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
-/* WHATSAPP RSVP */
+/* Botón WhatsApp */
 .whatsapp-button {
     display: inline-block; background-color: white; color: var(--color-principal);
     padding: 16px 35px; text-decoration: none; font-weight: 600; font-size: 0.8rem;
@@ -63,21 +58,7 @@ h3 span { font-weight: 600; }
 }
 .whatsapp-button:hover { transform: scale(1.05); }
 
-/* SECCIÓN REGALOS INTERACTIVA */
-.gift-text { font-size: 0.8rem; line-height: 1.8; margin-bottom: 25px; opacity: 0.9; }
-.view-button {
-    background: transparent; border: 1px solid white; color: white;
-    padding: 12px 40px; cursor: pointer; letter-spacing: 2px;
-}
-.bank-info .bold { font-weight: 600; font-size: 1.1rem; margin-top: 5px; }
-.cbu-text { font-size: 0.75rem !important; }
-
-/* LOGICA DE VISIBILIDAD PARA REGALOS */
-.hidden { display: none; opacity: 0; }
-.fade-in-data { display: block !important; animation: simpleFade 0.6s forwards; }
-@keyframes simpleFade { from { opacity: 0; } to { opacity: 1; } }
-
-/* ANIMACIONES DE SCROLL (Fade-In) */
-.fade-in-section { opacity: 0; transform: translateY(25px); transition: all 0.8s ease-out; }
+/* Fade-In Scroll */
+.fade-in-section { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 .footer-msg { padding: 30px 20px; font-size: 0.8rem; }
